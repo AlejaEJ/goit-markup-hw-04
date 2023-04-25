@@ -1,0 +1,325 @@
+:root{
+    --primary-black-color: #212121;
+    --primary-text-color: #757575;
+    --primary-white-color: #ffffff;
+    --border-color: #ececec;
+
+    --accent-color: #2196f3;
+    --background-black: #2f303a;
+    --background-gray: #f5f4fa;
+    --button-primary-hover: #188ce8;
+    --text-white-opacity: #ffffff99;
+    --bordercards-color: #eeeeee;
+
+    --container-padding: calc((100% - 1200px) / 2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-white-color);
+    color: var(--primary-text-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+.button-primary{
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 10px 32px;
+}
+
+.button-primary:hover,
+.button-primary:focus{
+    background-color: var(--button-primary-hover);
+}
+
+.container{
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    color: var(--accent-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none; 
+}
+
+.section{
+    padding: 30px 0;
+}
+
+.section > h2{
+    color: var(--primary-black-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+
+    padding: 30px 0 55px;
+    text-align: center;
+}
+
+.no-top-padding{
+    padding-top: 0;
+}
+
+a{
+    text-decoration: none; 
+}
+
+/* Header section */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+header nav .logo{
+    color: var(--accent-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+header nav .nav-menu-list{
+    display: flex;
+    list-style: none;
+    gap: 80px;
+}
+
+header nav .nav-menu-list .page,
+.page-current{
+    color: var(--primary-black-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.contacts-menu-list{
+    display:flex;
+    list-style: none;
+    gap: 80px;
+}
+
+.contacts-menu-list .item {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.nav-menu-list .page:hover,
+.nav-menu-list .page:focus,
+.nav-menu-list .page-current:hover,
+.nav-menu-list .page-current:focus,
+.contacts-menu-list .item:hover,
+.contacts-menu-list .item:focus {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section{
+    background-color: var(--primary-black-color);
+    padding: 200px var(--container-padding);
+    font-weight: 900;
+    text-align: center;
+}
+
+.hero-section .hero-title{
+    color: var(--primary-white-color);
+    font-size: 44px;
+    width: 500px;
+    margin: 20px auto;
+}
+
+/* Benefits section */
+.benefits {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+}
+
+.benefits li{
+    list-style: none;
+    width: 270px;
+}
+
+.benefits li .title{
+    color: var(--primary-black-color);
+    height: 40px;
+}
+
+/* What we do section */
+.what-we-do-section .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.what-we-do-section .container ul li{
+    list-style: none;
+}
+
+/* Team section */
+.team-section{
+    background-color: var(--background-gray); 
+}
+
+.team{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.team li{
+    background-color: var(--primary-white-color);
+    text-align: center;
+    list-style: none;
+}
+
+.team li h3{
+    color: var(--primary-black-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+
+    margin: 30px 0 10px 0;
+}
+
+.team li p{
+    margin-bottom: 30px;
+}
+
+/* Portfolio section */
+.portfolio-section .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.portfolio-section li button{
+    background-color: var(--background-gray);
+    color: var(--primary-black-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 6px 25px;
+}
+
+.portfolio-section .menu .button-current:hover,
+.portfolio-section .menu .button-current:focus,
+.portfolio-section .menu .button:hover,
+.portfolio-section .menu .button:focus{
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+}
+
+.portfolio-section .cards{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+}
+
+.portfolio-section .cards li{
+    margin-bottom: 20px;
+    width: 370px;
+    border-bottom: 1px solid var(--bordercards-color); 
+}
+
+.portfolio-section .cards li a h2{
+    color: var(--primary-black-color);
+    background-color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+
+    padding: 4px 24px;
+}
+
+.portfolio-section .cards li a p{
+    color: var(--primary-text-color);
+    background-color: var(--primary-white-color);
+    font-size: 16px;
+    line-height: 1.9;
+
+    padding: 4px 24px;
+}
+
+/* Footer section */
+footer{
+    background-color: var(--background-black);
+    padding: 60px var(--container-padding);
+}
+
+address ul{
+    list-style: none;
+}
+
+address .contact{
+    display: block;
+    font-style: normal;
+    color: var(--primary-white-color);
+}
+
+address .contact-channel{
+    display: block;
+    font-style: normal;
+    color: var(--text-white-opacity);
+    text-decoration: none;
+}
+
+.contact:hover,
+.contact:focus,
+.contact-channel:hover,
+.contact-channel:focus{
+    color: var(--accent-color);
+}
