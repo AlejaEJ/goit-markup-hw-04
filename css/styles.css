@@ -156,8 +156,9 @@ header nav .nav-menu-list .page,
 
 /* Hero Section */
 .hero-section{
-    background-color: var(--primary-black-color);
+    background-image: linear-gradient(rgba(47,48,58,0.7),rgba(47,48,58,0.4)), url(../Images/hero1.jpg);
     padding: 200px var(--container-padding);
+
     font-weight: 900;
     text-align: center;
 }
@@ -165,8 +166,8 @@ header nav .nav-menu-list .page,
 .hero-section .hero-title{
     color: var(--primary-white-color);
     font-size: 44px;
-    width: 500px;
-    margin: 20px auto;
+    width: 600px;
+    margin: 30px auto;
 }
 
 /* Benefits section */
