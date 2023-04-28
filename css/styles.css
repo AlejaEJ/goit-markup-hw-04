@@ -329,11 +329,13 @@ a {
     fill: var(--icon-color);
 }
 
-.team-section .container .team-cards li ul li:hover a {
+.team-section .container .team-cards li ul li:hover a,
+.team-section .container .team-cards li ul li a:focus {
     background-color: var(--accent-color);
 }
 
-.team-section .container .team-cards li ul li:hover a .icon {
+.team-section .container .team-cards li ul li:hover a .icon,
+.team-section .container .team-cards li ul li a:focus .icon {
     fill: var(--primary-white-color);
 }
 
@@ -371,11 +373,13 @@ a {
     fill: var(--icon-color);
 }
 
-.clients-section .container ul li:hover a {
+.clients-section .container ul li:hover a,
+.clients-section .container ul li a:focus {
     border-color: var(--accent-color);
 }
 
-.clients-section .container ul li:hover a .icon-client {
+.clients-section .container ul li:hover a .icon-client,
+.clients-section .container ul li a:focus .icon-client {
     fill: var(--accent-color);
 }
 
@@ -538,10 +542,7 @@ footer .container aside ul li a .icon {
     
 }
 
-footer .container aside ul li:hover a {
+footer .container aside ul li:hover a,
+footer .container aside ul li a:focus {
     background-color: var(--accent-color);
-}
-
-footer .container aside ul li:hover a .icon {
-    fill: var(--primary-white-color);
 }
