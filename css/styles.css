@@ -453,6 +453,10 @@ footer {
     padding: 60px var(--container-padding);
 }
 
+footer .logo {
+    padding-left: 15px;
+}
+
 footer .container {
     display: flex;
     justify-content: flex-start;
@@ -461,7 +465,8 @@ footer .container {
 }
 
 footer .container address {
-    display: block;
+    display: flex;
+    width: 230;
 }
 
 footer .container address ul {
@@ -469,13 +474,12 @@ footer .container address ul {
 }
 
 footer .container address .contact {
-    display: block;
+    display: flex;
     font-style: normal;
     color: var(--primary-white-color);
 }
 
 footer .container address .contact-channel {
-    display: block;
     font-style: normal;
     color: var(--text-white-opacity);
     text-decoration: none;
