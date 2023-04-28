@@ -89,7 +89,7 @@ a {
 }
 
 /* Header section */
-header {
+.page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,13 +100,13 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-header nav {
+.page-header nav {
     display: flex;
     align-items: center;
     gap: 90px;
 }
 
-header nav .logo {
+.page-header nav .logo {
     color: var(--accent-color);
     font-family: "Raleway", sans-serif;
     font-size: 26px;
@@ -115,13 +115,13 @@ header nav .logo {
     text-decoration: none;
 }
 
-header nav .nav-menu-list {
+.page-header nav .nav-menu-list {
     display: flex;
     list-style: none;
     gap: 80px;
 }
 
-header nav .nav-menu-list .page,
+.page-header nav .nav-menu-list .page,
 .page-current {
     color: var(--primary-black-color);
     font-weight: 500;
@@ -146,6 +146,18 @@ header nav .nav-menu-list .page,
     text-decoration: none;
 }
 
+.contacts-menu-list .item .email-logo {
+    width: 16px;
+    height: 12px;
+    fill: var(--primary-text-color);
+}
+
+.contacts-menu-list .item .phone-logo {
+    width: 10px;
+    height: 16px;
+    fill: var(--primary-text-color);
+}
+
 .nav-menu-list .page:hover,
 .nav-menu-list .page:focus,
 .nav-menu-list .page-current:hover,
@@ -153,6 +165,13 @@ header nav .nav-menu-list .page,
 .contacts-menu-list .item:hover,
 .contacts-menu-list .item:focus {
     color: var(--accent-color);
+}
+
+.contacts-menu-list .item:hover .email-logo,
+.contacts-menu-list .item:focus .email-logo,
+.contacts-menu-list .item:hover .phone-logo,
+.contacts-menu-list .item:focus .phone-logo {
+    fill: var(--accent-color);
 }
 
 /* Hero Section */
@@ -290,7 +309,7 @@ header nav .nav-menu-list .page,
     fill: var(--primary-white-color);
 }
 
-/* Clients section */
+/* Regular clients section */
 .clients-section .container ul {
     display:flex;
     align-items: center;
@@ -333,7 +352,7 @@ header nav .nav-menu-list .page,
 }
 
 /* Portfolio section */
-.portfolio-section .menu{
+.portfolio-section .menu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +361,7 @@ header nav .nav-menu-list .page,
     list-style: none;
 }
 
-.portfolio-section li button{
+.portfolio-section li button {
     background-color: var(--background-gray);
     color: var(--primary-black-color);
     font-weight: 500;
@@ -358,25 +377,26 @@ header nav .nav-menu-list .page,
 .portfolio-section .menu .button-current:hover,
 .portfolio-section .menu .button-current:focus,
 .portfolio-section .menu .button:hover,
-.portfolio-section .menu .button:focus{
+.portfolio-section .menu .button:focus {
     background-color: var(--accent-color);
     color: var(--primary-white-color);
 }
 
-.portfolio-section .cards{
+.portfolio-section .cards {
     justify-content: space-between;
     flex-wrap: wrap;
     display: flex;
     list-style: none;
 }
 
-.portfolio-section .cards li{
+.portfolio-section .cards li {
     margin-bottom: 20px;
     width: 370px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     border-bottom: 1px solid var(--bordercards-color); 
 }
 
-.portfolio-section .cards li a h2{
+.portfolio-section .cards li a h2 {
     color: var(--primary-black-color);
     background-color: var(--primary-white-color);
     font-weight: 700;
@@ -387,7 +407,7 @@ header nav .nav-menu-list .page,
     padding: 4px 24px;
 }
 
-.portfolio-section .cards li a p{
+.portfolio-section .cards li a p {
     color: var(--primary-text-color);
     background-color: var(--primary-white-color);
     font-size: 16px;
@@ -397,22 +417,22 @@ header nav .nav-menu-list .page,
 }
 
 /* Footer section */
-footer{
+footer {
     background-color: var(--background-black);
     padding: 60px var(--container-padding);
 }
 
-address ul{
+address ul {
     list-style: none;
 }
 
-address .contact{
+address .contact {
     display: block;
     font-style: normal;
     color: var(--primary-white-color);
 }
 
-address .contact-channel{
+address .contact-channel {
     display: block;
     font-style: normal;
     color: var(--text-white-opacity);
@@ -422,6 +442,6 @@ address .contact-channel{
 .contact:hover,
 .contact:focus,
 .contact-channel:hover,
-.contact-channel:focus{
+.contact-channel:focus {
     color: var(--accent-color);
 }
