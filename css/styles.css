@@ -90,23 +90,27 @@ a {
 
 /* Header section */
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     height: 80px;
     padding: 0 var(--container-padding);
     margin: 0 auto;
     border-bottom: 1px solid var(--border-color);
 }
 
-.page-header nav {
+.page-header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 90px;
+
+    height: 100%
 }
 
-.page-header nav .logo {
+.page-header .container nav {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.page-header .container nav .logo {
     color: var(--accent-color);
     font-family: "Raleway", sans-serif;
     font-size: 26px;
@@ -115,13 +119,13 @@ a {
     text-decoration: none;
 }
 
-.page-header nav .nav-menu-list {
+.page-header .container nav .nav-menu-list {
     display: flex;
     list-style: none;
     gap: 80px;
 }
 
-.page-header nav .nav-menu-list .page,
+.page-header .container nav .nav-menu-list .page,
 .page-current {
     color: var(--primary-black-color);
     font-weight: 500;
@@ -131,46 +135,51 @@ a {
     text-decoration: none;
 }
 
-.contacts-menu-list {
+.page-header .container .contacts-menu-list {
     display:flex;
     list-style: none;
     gap: 80px;
 }
 
-.contacts-menu-list .item {
+.page-header .container .contacts-menu-list li .item {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.02em;
     text-decoration: none;
+    height: 20px;
 }
 
-.contacts-menu-list .item .email-logo {
+.page-header .container .contacts-menu-list li .item .email-logo {
     width: 16px;
     height: 12px;
     fill: var(--primary-text-color);
 }
 
-.contacts-menu-list .item .phone-logo {
+.page-header .container .contacts-menu-list li .item .phone-logo {
     width: 10px;
     height: 16px;
     fill: var(--primary-text-color);
 }
 
-.nav-menu-list .page:hover,
-.nav-menu-list .page:focus,
-.nav-menu-list .page-current:hover,
-.nav-menu-list .page-current:focus,
-.contacts-menu-list .item:hover,
-.contacts-menu-list .item:focus {
+.page-header .container nav .nav-menu-list .page:hover,
+.page-header .container nav .nav-menu-list .page:focus,
+.page-header .container nav .nav-menu-list .page-current:hover,
+.page-header .container nav .nav-menu-list .page-current:focus,
+.page-header .container .contacts-menu-list li .item:hover,
+.page-header .container .contacts-menu-list li .item:focus {
     color: var(--accent-color);
 }
 
-.contacts-menu-list .item:hover .email-logo,
-.contacts-menu-list .item:focus .email-logo,
-.contacts-menu-list .item:hover .phone-logo,
-.contacts-menu-list .item:focus .phone-logo {
+.page-header .container .contacts-menu-list li .item:hover .email-logo,
+.page-header .container .contacts-menu-list li .item:focus .email-logo,
+.page-header .container .contacts-menu-list li .item:hover .phone-logo,
+.page-header .container .contacts-menu-list li .item:focus .phone-logo {
     fill: var(--accent-color);
 }
 
@@ -230,7 +239,29 @@ a {
 }
 
 .what-we-do-section .container ul li {
+    position: relative;
     list-style: none;
+    overflow: hidden;
+}
+
+.what-we-do-section .container ul li img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.what-we-do-section .container li > p {
+    font-weight: 700;
+    font-size: 14px;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 373px;
+    height: 70px;
+    color: var(--primary-white-color);
+    text-align: center;
+    padding: 27px 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
 }
 
 /* Team section */
@@ -422,26 +453,84 @@ footer {
     padding: 60px var(--container-padding);
 }
 
-address ul {
+footer .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+footer .container address {
+    display: block;
+}
+
+footer .container address ul {
     list-style: none;
 }
 
-address .contact {
+footer .container address .contact {
     display: block;
     font-style: normal;
     color: var(--primary-white-color);
 }
 
-address .contact-channel {
+footer .container address .contact-channel {
     display: block;
     font-style: normal;
     color: var(--text-white-opacity);
     text-decoration: none;
 }
 
-.contact:hover,
-.contact:focus,
-.contact-channel:hover,
-.contact-channel:focus {
+footer .container address .contact:hover,
+footer .container address .contact:focus,
+footer .container address .contact-channel:hover,
+footer .container address .contact-channel:focus {
     color: var(--accent-color);
+}
+
+footer .container aside p {
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary-white-color);
+}
+
+footer .container aside ul {
+    padding-top: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content:center;
+    gap: 15px;
+}
+
+footer .container aside ul li {
+    display:block;
+    width: 44px;
+    height: 44px;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+footer .container aside ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .container aside ul li a .icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-white-color);
+    
+}
+
+footer .container aside ul li:hover a {
+    background-color: var(--accent-color);
+}
+
+footer .container aside ul li:hover a .icon {
+    fill: var(--primary-white-color);
 }
